@@ -1,0 +1,61 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+        <img src="assets/images/background.jpg"/>
+        <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="title">
+      <div class="actions">
+        <div class="map">
+          <ion-icon name="pin" (click)="goToMap()"></ion-icon>
+        </div>
+        <div class="home">
+          <ion-icon name="home" (click)="goToFeed()"></ion-icon>
+        </div>
+        <div class="compte">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <div class="cart">
+          <ion-icon name="call"  (click)="goToCRDA()"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="contenuCompte">
+      <div class="image" [style.backgroundImage]="'url(' + user_session.getUser().photo + ')'">
+      </div>
+      <div class="name">
+        <b>{{user_session.getUser().name}}</b>
+      </div>
+      <div class="nbrArbres">
+        <p *ngIf="user_session.getUser().totalArbres != 1">{{user_session.getUser().totalArbres}} arbres</p>
+        <p *ngIf="user_session.getUser().totalArbres == 1">{{user_session.getUser().totalArbres}} arbre</p>
+      </div>
+      <!-- <div class="comingsoon">
+        <img src="assets/images/comingsoon.png"/>
+
+      </div> -->
+      <div class="compteContainer">
+        <div class="compteContenu" (click)="goToAbout()">
+          <b>&Agrave; propos</b>
+        </div>
+        <div class="compteContenu" (click)="goToSteps()">
+          <b>Comment ça marche ?</b>
+        </div>
+        <div class="compteContenu" (click)="goToConfidentialite()">
+          <b>Confidentialité</b>
+        </div>
+      </div>
+      <div class="total">
+          <h1>Total des arbres plantées: </h1>
+          <div class="nbr">
+            <b>{{total}}</b>
+          </div>
+          <div class="million">
+            <b>/ 1 million</b>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

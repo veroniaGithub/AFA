@@ -1,0 +1,34 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+        <img src="assets/images/background.jpg"/>
+        <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="userslist">
+      <div [ngClass]="{'user': user.email!=user_session.getUser().email, 'usersession': user.email==user_session.getUser().email}"  *ngFor="let user of users;let i=index">
+        <div class="rank">
+          <b *ngIf="(i+1)>3">{{i+1}}</b>
+          <img *ngIf="(i+1)==1" src="assets/images/gold.png"/>
+          <img *ngIf="(i+1)==2" src="assets/images/silver.png"/>
+          <img *ngIf="(i+1)==3" src="assets/images/bronze.png"/>
+
+        </div>
+        <div class="image" [style.backgroundImage]="'url(' + user.photo + ')'">
+        </div>
+        <div class="name">
+          <b>{{user.name}}</b>
+        </div>
+        <div class="nbrArbres">
+          <b *ngIf="user.totalArbres != 1">{{user.totalArbres}} arbres</b>
+          <b *ngIf="user.totalArbres == 1">{{user.totalArbres}} arbre</b>
+        </div>
+      </div>
+
+    </div>
+    <div class="close" (click)="goToMap()">
+      <ion-icon name="close"></ion-icon>
+    </div>
+  </div>
+
+</ion-content>

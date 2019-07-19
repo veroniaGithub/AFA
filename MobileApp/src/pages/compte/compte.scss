@@ -1,0 +1,166 @@
+page-compte {
+  .backgroundContainer {
+    padding: 0;
+    font-family: "Lobster";
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .imgBackground {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .imgBackground img {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    padding: 0 2px;
+    height: 100%;
+  }
+  .backgroundImgLayer {
+    background: linear-gradient(rgba(0, 50, 25, 0.8), rgba(0, 50, 25, 0.8));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .actions {
+    text-align: center;
+    z-index: 10;
+  }
+  .home {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+
+  }
+  .home ion-icon{
+    font-size: 220%;
+        line-height: 138%;
+  }
+  .compte {
+    color: #069240;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+    background: #eee;
+  }
+  .compte ion-icon{
+    font-size: 220%;
+        line-height: 138%;
+  }
+  .cart {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .cart ion-icon{
+    font-size: 220%;
+        line-height: 138%;
+  }
+  .map {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .map ion-icon{
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .title {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    background: #069240;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+.contenuCompte {
+  position: fixed;
+      top: 65px;
+      width: 100%;
+      overflow: scroll;
+      height: 100%;
+      padding-bottom: 30%;
+}
+.image {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    z-index: 10;
+    border-radius: 50%;
+    display: table;
+    margin: 0 auto;
+    border: solid #003219;
+    top: 30px;
+}
+.name {
+  position: relative;
+      display: table;
+      margin: 0 auto;
+      top: 30px;
+      font-size: 25px;
+      color: #fff;
+}
+.nbrArbres {
+    color: #fff;
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    top: 20px;
+    font-size: 17px;
+}
+// .comingsoon {
+//     position: relative;
+//     width: 260px;
+//     height: 260px;
+//     background-size: cover;
+//     z-index: 10;
+//     display: table;
+//     margin: 0 auto;
+//     top: 70px;
+// }
+.compteContainer {
+    color: #fff;
+    margin: 20px 0;
+}
+.compteContenu {
+    padding: 15px 0;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.2);
+}
+.compteContenu b {
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.total {
+    color: #fff;
+}
+.nbr,.million {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+.nbr b {
+    float: right;
+    font-size: 40px;
+    color: green;
+}
+.million b {
+    font-size: 20px;
+    float: left;
+    padding-left: 14px;
+    line-height: 60px;
+}
+}

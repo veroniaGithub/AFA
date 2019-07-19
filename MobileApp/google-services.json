@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "870601950983",
+    "firebase_url": "https://million-trees-for-tunisia.firebaseio.com",
+    "project_id": "million-trees-for-tunisia",
+    "storage_bucket": "million-trees-for-tunisia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870601950983:android:170e5dea7028d3e8",
+        "android_client_info": {
+          "package_name": "tn.veronia.mtft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870601950983-77iojqmujmk6auh145ko3oivq5mqbh2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tn.veronia.mtft",
+            "certificate_hash": "5ea5498bb42304cac3ca63e2204cafd851c05b64"
+          }
+        },
+        {
+          "client_id": "870601950983-36fr7gvvbot8paba9i1b9jp4gs63k4nv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxNcU1haMhI-4U9w78KNW6dpMO-4ZsgMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870601950983-01g8cnho93l49s4ae3l7id2i66p3vfon.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tn.veronia.mtft"
+              }
+            },
+            {
+              "client_id": "870601950983-36fr7gvvbot8paba9i1b9jp4gs63k4nv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

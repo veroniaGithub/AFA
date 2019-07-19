@@ -1,0 +1,63 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+      <img src="assets/images/background.jpg" />
+      <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="title">
+      <div class="actions">
+        <div class="map">
+          <ion-icon name="pin" (click)="goToMap()"></ion-icon>
+        </div>
+        <div class="home">
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="compte">
+          <ion-icon name="person" (click)="goToCompte()"></ion-icon>
+        </div>
+        <div class="cart" (click)="goToCRDA()">
+          <ion-icon name="call"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="feed" *ngFor="let feed of feeds">
+        <div class="feedHeader" (click)="like(feed)">
+          <div class="backgroundFeed"></div>
+          <div class="image" [style.backgroundImage]="'url(' + feed.image + ')'"></div>
+          <div class="location">
+            <ion-icon name="pin" (click)="goToMap()"></ion-icon>
+          </div>
+          <div class="adresse">
+            <b>{{feed.address}}</b>
+          </div>
+          <div class="like" *ngIf="user_session.getUser().likes.indexOf(feed._id)<0">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+          <div class="like-red" *ngIf="user_session.getUser().likes.indexOf(feed._id)>=0">
+            <ion-icon name="heart"></ion-icon>
+          </div>
+        </div>
+        <div class="feedData">
+          <div class="userImage" [style.backgroundImage]="'url(' + feed.user.photo + ')'"></div>
+          <div class="date">
+            <b>{{feed.date}}</b>
+          </div>
+          <div class="userName">
+            <b>{{feed.user.name}}</b>
+            <h1>{{feed.likes}}
+              <ion-icon name="heart"></ion-icon>
+            </h1>
+          </div>
+          <div class="share" (click)="share(feed)">
+            <ion-icon name="md-share"></ion-icon>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+

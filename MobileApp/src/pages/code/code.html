@@ -1,0 +1,40 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+      <img src="assets/images/background.jpg" />
+      <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="connexion">
+      <a>Veuillez entrer le code de 10 chiffres reçu dans votre e-mail {{user_session.getUser().email}}!</a>
+      <div class="connexionbuttons">
+        <div class="code">
+          <input #codeNumber placeholder="Votre code" type="tel" name="codeNumber" maxlength="10">
+          <div class="next" (click)="validerCode()">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="messageerror">
+        <b>{{messageerror}}</b>
+      </div>
+    </div>
+    <div class="connexion changeEmail">
+      <a>Vous n'avez pas reçu le code et vous voulez changer votre e-mail ?</a>
+      <div class="connexionbuttons">
+        <div class="code">
+          <input #newEmail placeholder="Veuillez entrer votre e-mail" type="email" name="codeNumber">
+          <div class="next" (click)="changerEmail()">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="messageerror">
+        <b>{{messageerroremail}}</b>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+

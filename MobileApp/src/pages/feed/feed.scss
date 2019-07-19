@@ -1,0 +1,229 @@
+page-feed {
+  .backgroundContainer {
+    padding: 0;
+    font-family: "Lobster";
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .imgBackground {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .imgBackground img {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    padding: 0 2px;
+    height: 100%;
+  }
+  .backgroundImgLayer {
+    background: linear-gradient(rgba(3, 3, 3, 0.7), rgba(3, 3, 3, 0.7));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .actions {
+    text-align: center;
+    z-index: 10;
+  }
+  .home {
+    color: #069240;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+    background: #eee;
+  }
+  .home ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .compte {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .compte ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .cart {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .cart ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .map {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .map ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .title {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    background: #069240;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .list {
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    font-family: "Century Gothic";
+    overflow: scroll;
+    height: 100%;
+    padding-bottom: 30%;
+  }
+  .feed {
+    width: 96%;
+    margin-left: 2%;
+    position: relative;
+    float: left;
+  }
+  .image {
+    position: relative;
+    height: 210px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 130%;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    z-index: 1;
+    padding: 0 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  .userImage {
+    height: 65px;
+    width: 65px;
+    background-size: cover;
+    z-index: 10;
+    border-radius: 50%;
+    display: table;
+    float: left;
+    margin-top: -30px;
+    margin-left: 20px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    padding: 0 2px;
+    border: solid rgba(255, 255, 255, 0.4) 0.5px;
+  }
+  .backgroundFeed {
+    position: relative;
+    float: left;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    z-index: 2;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  .feedHeader {
+    position: relative;
+    float: left;
+    height: 200px;
+    width: 100%;
+  }
+  .feedData {
+    position: relative;
+    height: 66px;
+    width: 100%;
+    background-size: 98%;
+    z-index: 5;
+    background: #fff;
+    margin-top: 201px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  .userName {
+    position: relative;
+    margin-top: -16px;
+    z-index: 5;
+    width: 68%;
+    text-align: left;
+  }
+  .date {
+    width: 32%;
+    position: relative;
+    z-index: 5;
+    margin-top: 207px;
+    margin-left: 70%;
+    color: #888;
+  }
+  .like {
+    position: relative;
+    float: right;
+    z-index: 5;
+    font-size: 26px;
+    color: #fff;
+    margin-top: -200px;
+    margin-right: 29px;
+  }
+  .like-red {
+    position: relative;
+    float: right;
+    z-index: 5;
+    font-size: 26px;
+    color: #d50000;
+    margin-top: -200px;
+    margin-right: 29px;
+  }
+  .location {
+    position: relative;
+    float: left;
+    z-index: 5;
+    font-size: 15px;
+    color: #ccc;
+    margin-top: -195px;
+    margin-left: 10px;
+  }
+  .adresse {
+    position: relative;
+    float: left;
+    z-index: 5;
+    font-size: 15px;
+    color: #ccc;
+    margin-top: -195px;
+    margin-left: 25px;
+    width: 70%;
+    text-decoration: underline;
+    text-align: left;
+  }
+  .userName h1 {
+    font-size: 17px;
+    margin-left: 88px;
+    margin-top: 11px;
+    color: #d50000;
+    font-weight: bold;
+  }
+  .userName ion-icon {
+    font-size: 18px;
+    margin-left: 4px;
+  }
+  .share {
+    position: absolute;
+    bottom: 8px;
+    font-size: 25px;
+    color: #1565C0;
+    width: 30%;
+    right: 0;
+  }
+}
+

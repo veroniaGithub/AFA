@@ -1,0 +1,33 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+        <img src="assets/images/background.jpg"/>
+        <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="aboutContainer">
+      <div class="gps">
+        <b class="emptyB">Plantation en position actuelle</b>
+        <p>Planter selon votre position actuelle indiquée par votre appareil.</p>
+        <div class="latLng empty"></div>
+        <button (click)="plantByLocation()">PLANTER<ion-icon name="locate" ></ion-icon></button>
+      </div>
+      <div class="divider"></div>
+      <div class="coordinates">
+        <b>Plantation par coordonnées</b>
+        <p>Planter par saisie manuelle de coordonnées de l'endroit désiré.</p>
+        <div class="latLng">
+            <h2>Latitude:</h2>
+            <input class="latitude" #lat type="number"/>
+            <h2>Longitude:</h2>
+            <input class="Longitude" #lng type="number"/>
+        </div>
+        <button (click)="plantByCoords()" type="submit">PLANTER <ion-icon name="paper-plane" ></ion-icon></button>
+      </div>
+    </div>
+    <div class="close" (click)="goToMap()">
+      <ion-icon name="close"></ion-icon>
+    </div>
+  </div>
+
+</ion-content>

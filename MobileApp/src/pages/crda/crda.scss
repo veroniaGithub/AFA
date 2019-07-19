@@ -1,0 +1,142 @@
+page-crda {
+  .backgroundContainer {
+    padding: 0;
+    font-family: "Lobster";
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .imgBackground {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .imgBackground img {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    padding: 0 2px;
+    height: 100%;
+  }
+  .backgroundImgLayer {
+    background: linear-gradient(rgba(3, 3, 3, 0.7), rgba(3, 3, 3, 0.7));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .actions {
+    text-align: center;
+    z-index: 10;
+  }
+  .home {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .home ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .compte {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .compte ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .cart {
+    color: #069240;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+    background: #eee;
+  }
+  .cart ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .map {
+    color: #fff;
+    padding: 9px 0;
+    width: 25% !important;
+    float: left;
+    border-right: solid #81C784 0.5px;
+  }
+  .map ion-icon {
+    font-size: 220%;
+    line-height: 138%;
+  }
+  .title {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    background: #069240;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .list {
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    font-family: "Century Gothic";
+    overflow: scroll;
+    height: 100%;
+    padding-bottom: 20%;
+  }
+  .card {
+    width: 96%;
+    margin: 16px 2% !important;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    color: #fff;
+    padding: 20px 0;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 0px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  ion-icon.icon.icon-ios.ion-md-more {
+    width: 1%;
+    margin-left: 2%;
+  }
+  .name {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 18px;
+  }
+  .address {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 12px;
+    color: #ccc;
+  }
+  .telephone {
+    width: 50%;
+    height: 40px;
+    bottom: 0 !important;
+    margin-top: 10px;
+    margin-left: 25%;
+    background: #069240;
+    border-radius: 5px;
+  }
+  .telephone ion-icon {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .telephone:active {
+    background: #fff;
+    color: #069240;
+  }
+  .telephone a {
+    padding: 2% 44%;
+    color: #fff;
+  }
+}
+

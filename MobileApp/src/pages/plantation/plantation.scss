@@ -1,0 +1,128 @@
+page-plantation {
+  .backgroundContainer {
+    padding: 0;
+    font-family: "Lobster";
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .imgBackground {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .imgBackground img {
+    width: 100%;
+    max-width: 100%;
+    float: left;
+    padding: 0 2px;
+    height: 100%;
+  }
+  .backgroundImgLayer {
+    background: linear-gradient(rgba(3, 3, 3, 0.7), rgba(3, 3, 3, 0.7));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .close {
+    position: fixed;
+    bottom: 5px;
+    color: #fff;
+    width: 100%;
+    font-size: 30px;
+}
+.aboutContainer {
+  position: fixed;
+  top: 10px;
+  width: 90%;
+  left: 5%;
+  color: #fff;
+  font-size: 18px;
+  overflow: scroll;
+  height: 88%;
+  text-align: center;
+}
+.aboutContainer button {
+  width: 60%;
+  margin-left: 20%;
+  padding-left: 44px;
+  background: #069240;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  float: left;
+  height: 40px;
+  font-family: "Arial";
+  text-align: left;
+  line-height: 25px;
+}
+.aboutContainer b {
+  position: relative;
+  float: left;
+  height: 15%;
+  text-align: center;
+  width: 90%;
+  margin-left: 5% !important;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin: 5px;
+}
+.aboutContainer p{
+  position: relative;
+  float: left;
+  width: 90%;
+  left: 5%;
+  color: #bbb;
+  font-size: 16px;
+  font-family: Arial;
+  overflow: scroll;
+  height: 25%;
+  margin: 0;
+}
+.emptyB{
+  height: 25% !important;
+}
+.gps {
+  height: 45%;
+}
+.coordinates {
+  height: 53%;
+}
+.divider {
+  height: 2px;
+  margin-top: -5%;
+  background: #fff;
+  margin-bottom: 6%;
+}
+.latLng {
+  width: 90%;
+  height: 35%;
+  float: left;
+  position: relative;
+}
+.latLng.empty{
+  height: 10%;
+}
+.latLng h2 {
+  position: relative;
+  float: left;
+  width: 40%;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: bold;
+  margin: 0;
+}
+.latLng input {
+  position: relative;
+  float: left;
+  width: 56%;
+  margin-bottom: 5%;
+  color: #000;
+  padding-left: 9px;
+}
+.aboutContainer ion-icon {
+  font-size: 27px;
+  float: right;
+  margin-right: 7%;
+}
+}

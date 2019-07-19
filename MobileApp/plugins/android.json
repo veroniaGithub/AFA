@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1257798277665089",
+            "APP_NAME": "Million Trees For Tunisia",
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-nativegeocoder": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        }
+    },
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "tn.veronia.mtft"
+        }
+    }
+}

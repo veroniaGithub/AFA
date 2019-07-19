@@ -1,0 +1,94 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+        <img src="assets/images/background.jpg"/>
+        <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="title">
+      <div class="actions">
+        <div class="map">
+          <ion-icon name="pin"></ion-icon>
+        </div>
+        <div class="home">
+          <ion-icon name="home" (click)="goToFeed()"></ion-icon>
+        </div>
+        <div class="compte">
+          <ion-icon name="person" (click)="goToCompte()"></ion-icon>
+        </div>
+        <div class="cart">
+          <ion-icon name="call" (click)="goToCRDA()"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div  scroll="false" #map id="map" zoom-control="false"></div>
+    <h1 *ngIf="totalPlant != 1">Total: {{totalPlant}} Arbres</h1>
+    <h1 *ngIf="totalPlant == 1">Total: {{totalPlant}} Arbre</h1>
+    <div class="plus" (click)="goToPlantation()">
+      <ion-icon name="add"></ion-icon>
+    </div>
+    <div class="podium" (click)="gotoPodium()">
+      <ion-icon name="podium"></ion-icon>
+    </div>
+    <div *ngIf="greenClicked || grayClicked" class="blackBackground" (click)="imgURL=null;grayClicked=false;greenClicked=false;"></div>
+    <div *ngIf="greenClicked" class="GreenMarker">
+      <div class="delete" (click)="deleteCoord();greenClicked=false;">
+          <ion-icon name="trash" ></ion-icon>
+      </div>
+      <div class="close" (click)="showEditInputField=false;doEditImgeField=false;grayClicked=false;greenClicked=false;imgURL=null;">
+        <ion-icon name="close" ></ion-icon>
+      </div>
+      <div [style.backgroundImage]="'url(' + bgImage + ')'" class="userImage">
+      </div>
+      <div class="content">
+        <div class="left">
+          <img src='http://veronia.tn/data/media/images/green.png' />
+        </div>
+        <div class="right">
+          <h1>{{name}}</h1>
+          <h2 *ngIf="!showEditInputField && selectedMarker.number != 1">{{selectedMarker.number}} Arbres</h2>
+          <h2 *ngIf="!showEditInputField && selectedMarker.number == 1">{{selectedMarker.number}} Arbre</h2>
+          <input class="inputNumberGreen" *ngIf="showEditInputField" #nbrAjout type="number" min="0" placeholder="Nouveau nombre des arbres"/>
+          <div *ngIf="!showEditInputField" class="editNumber" (click)="showEditInputField=true;">
+              <ion-icon name="create" ></ion-icon>
+          </div>
+          <h2>{{selectedMarker.date}}</h2>
+        </div>
+      </div>
+      <div class="photo">
+          <div class="editImage" (click)="doEditImgeField = true;takePhoto()">
+              <ion-icon name="create" ></ion-icon>
+          </div>
+        <img src="{{selectedMarker.image}}"/>
+      </div>
+      <button *ngIf="doEditImgeField || showEditInputField" (click)="editMarker()" type="submit">CONFIRMER</button>
+    </div>
+    <div *ngIf="grayClicked" class="GrayMarker">
+      <div class="delete" (click)="deleteCoord();grayClicked=false;">
+          <ion-icon name="trash" ></ion-icon>
+      </div>
+      <div class="close" (click)="grayClicked=false;greenClicked=false;imgURL=null;">
+        <ion-icon name="close" ></ion-icon>
+      </div>
+      <div [style.backgroundImage]="'url(' + bgImage + ')'" class="userImage">
+      </div>
+      <div class="content">
+          <h1>{{name}}</h1>
+          <h2 *ngIf="totalPlant != 1">Total: {{totalPlant}} Arbres</h2>
+          <h2 *ngIf="totalPlant == 1">Total: {{totalPlant}} Arbre</h2>
+          <h2>Nombre des arbres à ajouter:</h2>
+          <input #nbrAjout type="number" min="0"/>
+          <div *ngIf="!imgURL" class="photo" (click)="takePhoto()">
+            <ion-icon name="camera"></ion-icon>
+            <h2>Prenez une photo de la plantation!</h2>
+          </div>
+          <div *ngIf="imgURL" class="photo">
+            <img src="{{imgURL}}"/>
+          </div>
+          <button (click)="turnIntoGreen()" type="submit">CONFIRMER</button>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

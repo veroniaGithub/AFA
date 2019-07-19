@@ -1,0 +1,316 @@
+<ion-content scroll="false">
+
+  <div class="backgroundContainer">
+    <div class="imgBackground">
+        <img src="assets/images/background.jpg"/>
+        <div class="backgroundImgLayer"></div>
+    </div>
+    <div class="title">
+      <div class="actions">
+        <div class="map">
+          <ion-icon name="pin" (click)="goToMap()"></ion-icon>
+        </div>
+        <div class="home">
+          <ion-icon name="home" (click)="goToFeed()"></ion-icon>
+        </div>
+        <div class="compte">
+          <ion-icon name="person" (click)="goToCompte()"></ion-icon>
+        </div>
+        <div class="cart">
+          <ion-icon name="call"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="card">
+        <div class="name">
+          <b>CRDA Tunis</b>
+
+        </div>
+        <div class="address">
+          <b>35, Avenue Kheireddine Pacha</b>
+        </div>
+        <div class="telephone"><a href="tel:+21671801636" (click)="callIT('tel:+21671801636')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Ariana</b>
+
+        </div>
+        <div class="address">
+          <b>Cité Bouchoucha - le Bardo 2000</b>
+        </div>
+        <div class="telephone"><a href="tel:+21671564939" (click)="callIT('tel:+21671564939')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Manouba</b>
+
+        </div>
+        <div class="address">
+          <b>35, Avenue Kheireddine Pacha</b>
+        </div>
+        <div class="telephone"><a href="tel:+21671624420" (click)="callIT('tel:+21671624420')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Nabeul</b>
+
+        </div>
+        <div class="address">
+          <b>Rue Mongi Bali - Nabeul 8000</b>
+        </div>
+        <div class="telephone"><a href="tel:+21672274434" (click)="callIT('tel:+21672274434')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Bizerte</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue Hassen Nouri - Bizerte 7000</b>
+        </div>
+        <div class="telephone"><a href="tel:+21672431438" (click)="callIT('tel:+21672431438')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Ben Arous</b>
+
+        </div>
+        <div class="address">
+          <b>Immeuble SPROLS - Nouvelle Médina 2063</b>
+        </div>
+        <div class="telephone"><a href="tel:+21671310037" (click)="callIT('tel:+21671310037')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Zaghouan</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue Hédi Chaker - Zaghouan 1100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21672675414" (click)="callIT('tel:+21672675414')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Siliana</b>
+
+        </div>
+        <div class="address">
+          <b>Route de Gaâfour - Siliana</b>
+        </div>
+        <div class="telephone"><a href="tel:+21678872790" (click)="callIT('tel:+21678872790')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Kef</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue de la Liberté -le Kef 7100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21678224711" (click)="callIT('tel:+21678224711')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Béja</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue Habib Bourguiba - Béjà 9000</b>
+        </div>
+        <div class="telephone"><a href="tel:+21678243754" (click)="callIT('tel:+21678243754')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Jendouba</b>
+
+        </div>
+        <div class="address">
+          <b>Route de Tunis - Jendouba 8100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21678603426" (click)="callIT('tel:+21678603426')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Kasserine</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue Habib Bourguiba - Kasserine 1200</b>
+        </div>
+        <div class="telephone"><a href="tel:+21677474935" (click)="callIT('tel:+21677474935')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Sfax</b>
+
+        </div>
+        <div class="address">
+          <b>Rue Commandant Béjaoui</b>
+        </div>
+        <div class="telephone"><a href="tel:+21674226195" (click)="callIT('tel:+21674226195')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Sousse</b>
+
+        </div>
+        <div class="address">
+          <b>Rue d'Alger - Sousse</b>
+        </div>
+        <div class="telephone"><a href="tel:+21673224176" (click)="callIT('tel:+21673224176')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Monastir</b>
+
+        </div>
+        <div class="address">
+          <b>Sahel Jabeur - Monastir 5000</b>
+        </div>
+        <div class="telephone"><a href="tel:+21673460328" (click)="callIT('tel:+21673460328')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Mahdia</b>
+
+        </div>
+        <div class="address">
+          <b>Hiboun - Mahdia 5119</b>
+        </div>
+        <div class="telephone"><a href="tel:+21673680266" (click)="callIT('tel:+21673680266')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Kairouan</b>
+
+        </div>
+        <div class="address">
+          <b>Cité Sidi Layoun - Kairouan 3100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21677303117" (click)="callIT('tel:+21677303117')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Sidi Bouzid</b>
+
+        </div>
+        <div class="address">
+          <b>Avenue Habib Bourguiba - Sidi Bouzid 9100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21676632854" (click)="callIT('tel:+21676632854')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Gafsa</b>
+
+        </div>
+        <div class="address">
+          <b>Av. Habib Bourguiba - Gafsa 2100</b>
+        </div>
+        <div class="telephone"><a href="tel:+21676220104" (click)="callIT('tel:+21676220104')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Gabès</b>
+
+        </div>
+        <div class="address">
+          <b>Rue Abou Kacem Chebbi - 6019Gabès</b>
+        </div>
+        <div class="telephone"><a href="tel:+21675280831" (click)="callIT('tel:+21675280831')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Kebili</b>
+
+        </div>
+        <div class="address">
+          <b>Rue Salah B. Youssef Kebili - 4200</b>
+        </div>
+        <div class="telephone"><a href="tel:+21675490330" (click)="callIT('tel:+21675490330')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Tozeur</b>
+
+        </div>
+        <div class="address">
+          <b>Route de Nafta Avenue F. Hached</b>
+        </div>
+        <div class="telephone"><a href="tel:+21676452556" (click)="callIT('tel:+21676452556')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Medenine</b>
+
+        </div>
+        <div class="address">
+          <b>Rue 2Mai 1966- Medenine 4119</b>
+        </div>
+        <div class="telephone"><a href="tel:+21675640513" (click)="callIT('tel:+21675640513')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+      <div class="card">
+        <div class="name">
+          <b>CRDA Tataouine</b>
+
+        </div>
+        <div class="address">
+          <b>Cité 7Novembre - Tataouine</b>
+        </div>
+        <div class="telephone"><a href="tel:+21675870067" (click)="callIT('tel:+21675870067')">
+          <ion-icon name="call"></ion-icon>
+        </a></div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
