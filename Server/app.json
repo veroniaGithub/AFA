@@ -1,0 +1,8 @@
+{
+  "name": "veronia",
+  "description": "VERONIA website deployment on Heroku",
+  "repository": "",
+  "logo": "",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}

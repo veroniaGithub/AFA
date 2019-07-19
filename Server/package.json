@@ -1,0 +1,41 @@
+{
+  "name": "veronia",
+  "version": "1.0.0",
+  "description": "VERONIA official website",
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.7"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "npm install && node server.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "angular": "*",
+    "body-parser": "*",
+    "bootstrap": "*",
+    "compression": "*",
+    "ejs": "*",
+    "express": "*",
+    "mongoose": "*",
+    "nodemailer": "*",
+    "nodemon": "*"
+  },
+  "devDependencies": {
+    "jest": "*"
+  },
+  "jest": {
+    "coverageReporters": [
+      "html",
+      "text",
+      "text-summary"
+    ]
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
