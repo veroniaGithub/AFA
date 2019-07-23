@@ -1,91 +1,86 @@
 <header class="header navbar-fixed-top">
-    <!-- Navbar -->
-    <nav class="navbarMtft" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="menu-container js_nav-item">
-                <button type="button" class="navbar-toggle mtft" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="sr-only"></span>
-                    <span class="toggle-icon"></span>
-                </button>
+  <!-- Navbar -->
+  <nav class="navbarMtft" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="menu-container js_nav-item">
+        <button type="button" class="navbar-toggle mtft" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="sr-only"></span>
+          <span class="toggle-icon"></span>
+        </button>
 
-                <!-- Logo -->
-                <div class="logo">
-                    <a class="logo-wrap" href="#home">
-                        <img class="logo-img logo-img-main" src="http://www.veronia.tn/data/media/images/logo.png">
-                        <img class="logo-img logo-img-active" src="http://www.veronia.tn/data/media/images/logo.png">
-                    </a>
-                </div>
-                <!-- End Logo -->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse nav-collapse">
-                <div class="menu-container">
-                    <ul class="nav navbar-nav navbar-nav-right">
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" ng-click="refresh();code = true;list = false;">Code client</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" ng-click="refresh();code = false;list = true;">List of clients</a></li>
-
-                        <!-- <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#service">Services</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#team">Founders</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
-                        <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="/#!/fr">French</a></li> -->
-
-                    </ul>
-                </div>
-            </div>
-            <!-- End Navbar Collapse -->
+        <!-- Logo -->
+        <div class="logo">
+          <a class="logo-wrap" href="#home">
+            <img class="logo-img logo-img-main" src="http://www.veronia.tn/data/media/images/logo.png">
+            <img class="logo-img logo-img-active" src="http://www.veronia.tn/data/media/images/logo.png">
+          </a>
+          <input type="search" ng-model="search.name" placeholder="Chercher par le nom">
         </div>
-    </nav>
-    <!-- Navbar -->
+        <!-- End Logo -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse nav-collapse">
+        <div class="menu-container">
+          <ul class="nav navbar-nav navbar-nav-right">
+          </ul>
+        </div>
+      </div>
+      <!-- End Navbar Collapse -->
+    </div>
+  </nav>
+  <!-- Navbar -->
 </header>
 <!--========== END HEADER ==========-->
 <!--========== SLIDER ==========-->
-  <div class="codeClient" ng-if="code">
-    <div ng-if="codeNumber" class="number">
-      <b>{{codeNumber}}</b>
+<div class="listClient" ng-if="list && (widthScreen > 991)">
+  <div class="listStatic">
+    <div class="imageUser">
+      <b>Image</b>
+    </div>
+    <div class="nameUser">
+      <b>Nom & Prénom</b>
+    </div>
+    <div class="nombreUser">
+      <b>Total des arbres</b>
+    </div>
+    <div class="emailUser">
+      <b>Email</b>
     </div>
   </div>
-  <div class="listClient" ng-if="list && (widthScreen > 991)">
-    <div class="listStatic">
-      <div class="imageUser">
-        <b>Image</b>
-      </div>
-      <div class="nameUser">
-        <b>Nom & Prénom</b>
-      </div>
-      <div class="nombreUser">
-        <b>Total des arbres</b>
-      </div>
-      <div class="emailUser">
-        <b>Email</b>
-      </div>
+  <div ng-repeat="user in users | filter:search" class="list">
+    <div class="imageUser">
+      <div class="image" ng-style="{'background-image':'url(' + user.photo + ')'}"></div>
     </div>
-    <div ng-repeat="user in users" class="list">
-      <div class="imageUser">
-        <div class="image"  ng-style="{'background-image':'url(' + user.photo + ')'}"></div>
-      </div>
-      <div class="nameUser">
-        <b>{{user.name}}</b>
-      </div>
-      <div class="nombreUser">
-        <b>{{user.totalArbres}}</b>
-      </div>
-      <div class="emailUser">
-        <b>{{user.email}}</b>
-      </div>
-      <div ng-class="{'activateCoordsActive' : coords[user._id], 'activateCoords' :!coords[user._id] }" ng-click="coords[user._id]= !coords[user._id]">Voir les images de {{user.name}}</div>
-      <div ng-if="coords[user._id]" class="coordsImages">
-
-        <div ng-repeat="coord in user.coords" ng-if="coord.image" class="imageCoord">
-          <div class="image" ng-click="deleteCoord($event,user,coord)" ng-style="{'background-image': 'url(' + coord.image + ')'}">
-          </div>
+    <div class="nameUser">
+      <b>{{user.name}}</b>
+    </div>
+    <div class="nombreUser">
+      <b>{{user.totalArbres}}</b>
+    </div>
+    <div class="emailUser">
+      <b>{{user.email}}</b>
+    </div>
+    <div ng-show="user.totalArbres > 0"
+      ng-class="{'activateCoordsActive' : coords[user._id], 'activateCoords' :!coords[user._id] }"
+      ng-click="coords[user._id] = !coords[user._id]">Voir les images de {{user.name}}</div>
+    <div ng-show="user.totalArbres <= 0" class="activateCoordsActive" style="border: solid 1px #c90101;color: #c90101;">{{user.name}} n'a
+      pas encore planté !</div>
+    <div ng-if="coords[user._id]" class="coordsImages">
+      <div ng-repeat="coord in user.coords" ng-if="coord.image && coord.color == 'green'" class="imageCoord">
+        <div class="image" ng-mouseenter="showOverlay[coord.image]=true" ng-mouseleave="showOverlay[coord.image]=false"
+          ng-click="deleteCoord($event,coord.image, user._id)"
+          ng-style="{'background-image': 'url(' + coord.image + ')'}">
+          <div ng-if="showOverlay[coord.image]"><i class="material-icons">delete</i></div>
+          <b>{{coord.number}}</b>
         </div>
       </div>
     </div>
   </div>
-  <div class="listClient" ng-if="list && !(widthScreen > 991)">
-    <div class="contenuMobile">
-      <b>Ce contenu est disponible seulement sur les ordinateurs pour des raisons ergonomiques</b>
-    </div>
+</div>
+<div class="listClient" ng-if="list && !(widthScreen > 991)">
+  <div class="contenuMobile">
+    <b>Ce contenu est disponible seulement sur les ordinateurs pour des raisons ergonomiques</b>
   </div>
+</div>

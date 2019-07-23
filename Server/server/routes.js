@@ -33,6 +33,7 @@ module.exports = function(app){
     app.post('/mtft/ws_users/:id', mtft_users.update);
     app.delete('/mtft/ws_users/:id', mtft_users.delete);
     app.get('/mtft/ws_users/coords/:user_id/:lat/:lng', mtft_users.findByCoords);
+    app.post('/mtft/ws_users/image/delete', mtft_users.deleteImage);
 
     app.get('/mtft/ws_feeds', mtft_feeds.findAll);
     app.post('/mtft/ws_feeds', mtft_feeds.add);

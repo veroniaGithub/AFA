@@ -29,7 +29,7 @@ app.use('/data', express.static(__dirname + '/client/'));
 
 
 app.get('/', function(req, res) {
-  res.render('index.min.html');
+  res.render('index.html');
 });
 
 //Create Routes
