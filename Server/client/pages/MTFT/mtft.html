@@ -15,6 +15,12 @@
             <img class="logo-img logo-img-main" src="http://www.veronia.tn/data/media/images/logo.png">
             <img class="logo-img logo-img-active" src="http://www.veronia.tn/data/media/images/logo.png">
           </a>
+          <b>
+            Total des plantes en Tunisie :
+          </b>
+          <b class="number">
+            {{numberWithCommas(totalArbres)}}
+          </b>
           <input type="search" ng-model="search.name" placeholder="Chercher par le nom">
         </div>
         <!-- End Logo -->
@@ -43,7 +49,7 @@
       <b>Nom & Prénom</b>
     </div>
     <div class="nombreUser">
-      <b>Total des arbres</b>
+      <b>Total des plantes</b>
     </div>
     <div class="emailUser">
       <b>Email</b>
@@ -65,7 +71,8 @@
     <div ng-show="user.totalArbres > 0"
       ng-class="{'activateCoordsActive' : coords[user._id], 'activateCoords' :!coords[user._id] }"
       ng-click="coords[user._id] = !coords[user._id]">Voir les images de {{user.name}}</div>
-    <div ng-show="user.totalArbres <= 0" class="activateCoordsActive" style="border: solid 1px #c90101;color: #c90101;">{{user.name}} n'a
+    <div ng-show="user.totalArbres <= 0" class="activateCoordsActive" style="border: solid 1px #c90101;color: #c90101;">
+      {{user.name}} n'a
       pas encore planté !</div>
     <div ng-if="coords[user._id]" class="coordsImages">
       <div ng-repeat="coord in user.coords" ng-if="coord.image && coord.color == 'green'" class="imageCoord">

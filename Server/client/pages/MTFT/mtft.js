@@ -5,6 +5,7 @@ angular.module("mtftModule", ['ngMaterial'])
     $scope.code = false;
     $scope.codeNumber = "";
     $scope.users = [];
+    $scope.totalArbres = 0;
     $scope.refresh = function () {
       $http.get('http://www.veronia.tn/mtft/ws_codes').then(function (response) {
         if (response.data.value) $scope.codeNumber = response.data.value.toString();
@@ -12,9 +13,14 @@ angular.module("mtftModule", ['ngMaterial'])
       })
       $http.get('http://www.veronia.tn/mtft/ws_users').then(function (response) {
         $scope.users = response.data;
+        for(var userIndex in $scope.users){
+          var user = $scope.users[userIndex];
+          $scope.totalArbres += parseInt(user.totalArbres);
+        }
       })
     }
     $scope.refresh();
+
     $scope.deleteCoord = function ($event, image, idUser) {
       var confirm = $mdDialog.confirm()
         .title('Voulez vous supprimer cette image de la base de données?')
@@ -32,5 +38,8 @@ angular.module("mtftModule", ['ngMaterial'])
           $scope.refresh();
         })
       }, function () {});
+    }
+    $scope.numberWithCommas = function (x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
   });

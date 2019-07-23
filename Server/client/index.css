@@ -2154,3 +2154,15 @@ ul#countdown li p.timeRefSeconds {
     padding-left: 10px;
     border-radius: 18px;
 }
+.logo b {
+    position: absolute;
+    top: 0;
+    left: 38%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    width: 300px;
+}
+.logo .number {
+    top: 30px;
+}
